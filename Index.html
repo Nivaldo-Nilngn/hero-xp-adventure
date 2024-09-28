@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Herói - Ganhe XP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Jogo de Herói</h1>
+      <div id="hero-info">
+        <p>Herói: <span id="displayHeroName">---</span></p>
+        <p>XP: <span id="displayHeroXP">0</span></p>
+        <p>Nível: <span id="displayHeroLevel">---</span></p>
+      </div>
+    </header>
+
+    <form id="heroForm">
+      <label for="heroName">Digite o nome do herói:</label>
+      <input type="text" id="heroName" required>
+      <button type="submit">Iniciar Jogo</button>
+    </form>
+
+    <div id="gameArea" style="display:none;">
+      <h2>Ganhe XP</h2>
+      <button id="gainXPButton">Ganhar XP</button>
+      <div id="xpGainDisplay" class="hidden">+100 XP</div>
+
+      <div class="bonus-options">
+        <p>Bônus de XP:</p>
+        <label>
+          <input type="radio" name="xpBonus" value="1" checked>
+          Sem bônus
+        </label>
+        <label>
+          <input type="radio" name="xpBonus" value="2">
+          Dobrar XP
+        </label>
+        <label>
+          <input type="radio" name="xpBonus" value="3">
+          Triplicar XP
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
